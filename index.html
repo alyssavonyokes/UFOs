@@ -12,78 +12,93 @@
     />
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
-	<div class="wrapper">
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html">UFO Sightings</a>
-            <div class="jumbotron">
-                <h1>The Truth Is Out There</h1>
-              </div>
+<body class="bg-dark">
+    <div class="wrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <!-- Change color to match body-->
+            <a class="navbar-brand" href="index.html" style="color:#2ed4f1">UFO Sightings</a>
         </nav>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>UFO Sightings: Fact or Fancy? <small>Ufologists Weigh In</small></h3>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.<br><br>"The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"<br><br>Not everyone is ready to celebrate, however. Local CEO and vocal anti-alien activist V. Isualize reached out to our reporters to go on record as firmly opposed to any attempts to provide access to this data. "If there are aliens, they certainly would like to be left alone," she stated, before directing us to the Leave Aliens Alone (LAA) community engagement initiative she founded and funds.<br><br>So what do YOU think? Are we alone in the universe? Are aliens trying to contact us, or do they want to be left alone? Dig through the data yourself, and let us know what you see.
-          
-          
-                      </p>
-                </div>
+    <div class="jumbotron">
+        <!--Make font bold-->
+        <h1 class="display-4"><p class="font-weight-bold">The Truth Is Out There</p></h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>UFO Sightings: Fact of Fancy? <small>Ufologists Weigh In</small></h3>
             </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3">
-                    <form>
-                        <p>Filter Search</p>
-                        <ul class="list-group" id="filters">
-                            <li class="filter list-group-item">
-                                <label for="date" style="color:black">Enter Date</label>
-                                <input type="text" placeholder="1/1/2010" id="datetime" />
-                            </li>
-                            <li class="filter list-group-item">
-                                <label for="city" style="color:black">Enter City</label>
-                                <input type="text" placeholder="benton" id="city" />
-                            </li>
-                            <li class="filter list-group-item">
-                                <label for="state" style="color:black">Enter State</label>
-                                <input type="text" placeholder="ar" id="state" />
-                            </li>
-                            <li class="filter list-group-item">
-                                <label for="country" style="color:black">Enter Country</label>
-                                <input type="text" placeholder="us" id="country" />
-                            </li>
-                            <li class="filter list-group-item">
-                                <label for="shape" style="color:black">Enter Shape</label>
-                                <input type="text" placeholder="circle" id="shape" />
-                            </li>
-                        </ul>
-                       </form>
-                </div>
-                <div class="col-md-9">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                            <th>Date</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Country</th>
-                            <th>Shape</th>
-                            <th>Duration</th>
-                            <th>Comments</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>    
-                </div>
+            <div class="col-md-8">
+                <p>
+                    Are we alone in the universe? For millenia, humans have turned to the sky to answer this question. Now, thanks to reaserch generously funded by W.Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis. <br><br>
+                    
+                    "The release of this analysis is well-times: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especiall helpful in both cataloguing sightings-which is hugely helpful for us in our search for aliens-and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"<br><br>
+                    
+                    Not everyone is ready to celebrate, however. Local CEO and vocal anti-alien activist V. Isualize reached out to our reporters to go on record as firmly opposed to any attempts to provide access to this data. "If there are aliens, they certainly would like to be left alone," she stated, before directing us to the Leave Aliens Alone (LAA) community engagement initiative she founded and funds.<br><br>
+
+                    So what do YOU think? Are we alone in the universe? Are aliens trying to conacts us, or do they want to be left alone? Dig through the data yourself, and let us know what you see.
+                </p>          
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-    <script src="static/js/data.js"></script>
-    <script src="static/js/app.js"></script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <form class="bg-dark">
+                    <p>Filter Search</p>
+                    <ul class="list-group bg-dark">
+                        <li class="list-group-item bg-dark">
+                            <label for="date">Date</label>
+                            <input type="text" placeholder="1/10/2010" id="datetime" />
+                            <!-- Add calendar icon-->
+                            <svg class="bi bi-calendar-date-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM0 5h16v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5zm9.336 7.79c-1.11 0-1.656-.767-1.703-1.407h.683c.043.37.387.82 1.051.82.844 0 1.301-.848 1.305-2.164h-.027c-.153.414-.637.79-1.383.79-.852 0-1.676-.61-1.676-1.77 0-1.137.871-1.809 1.797-1.809 1.172 0 1.953.734 1.953 2.668 0 1.805-.742 2.871-2 2.871zm.066-2.544c.625 0 1.184-.484 1.184-1.18 0-.832-.527-1.23-1.16-1.23-.586 0-1.168.387-1.168 1.21 0 .817.543 1.2 1.144 1.2zm-2.957-2.89v5.332H5.77v-4.61h-.012c-.29.156-.883.52-1.258.777V8.16a12.6 12.6 0 0 1 1.313-.805h.632z"/>
+                              </svg> 
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <label for="date">City</label>
+                            <input type="text" placeholder="City" id="city" /> 
+                        </li>
+                        <li class="list-group-item bg-dark" style="text-align: top">
+                            <label for="date">State</label>
+                            <input type="text" placeholder="State Initials" id="state" /> 
+                        </li>
+                        <li class="list-group-item bg-dark" style="text-align:left">
+                            <label for="date">Country</label>
+                            <input type="text" placeholder="Country" id="country" /> 
+                        </li>
+                        <li class="list-group-item bg-dark" style="text-align:left">
+                            <label for="date">Shape</label>
+                            <input type="text" placeholder="Shape" id="shape" /> 
+                        </li>
+                        <li class="list-group-item bg-dark">
+                            <!-- Change type of button-->
+                            <button id="filter-btn" type="submit" class="btn-secondary btn-lg btn-block">Filter Table</button>               
+                        </li>
+                    </ul>
+                </form>       
+            </div>
+        <div class="col-md-9">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Shape</th>
+                        <th>Duration</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+        <script src="./static/js/data.js"></script>
+        <script src="./static/js/app.js"></script>
+        
+    </div> 
+    
 </body>
 </html>
